@@ -26,7 +26,7 @@ fun main() {
     }
 
     print("Pilih Jalur (1. Reguler, 2. Umum): ")
-    val type = scanner.Int()
+    val type = scanner.nextInt()
     scanner.nextLine()
 
     if (type == 1){
