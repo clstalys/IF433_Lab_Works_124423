@@ -22,4 +22,11 @@ fun main () {
     println("Damage: ${w.damage}")
     println("Tier: ${w.tier}")
 
+
+    //Main task 2
+    val p = Player("Lysia")
+
+    p.xp
+    p.addXp(50)
+    p.addXp(60)
 }
