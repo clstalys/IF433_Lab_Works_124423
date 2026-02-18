@@ -8,7 +8,6 @@ fun main () {
     println("Gaji: ${e.salary}")
 
     e.increasePerformanceRating()
-    // e.increasePerformanceRating() = 5
 
     println("Pajak yang harus dibayar: ${e.tax}")
 
