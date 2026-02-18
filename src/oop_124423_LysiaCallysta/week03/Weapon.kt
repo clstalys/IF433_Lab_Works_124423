@@ -15,7 +15,7 @@ class Weapon (val name: String) {
     val tier: String
         get() = when {
             damage > 800 -> "Legendary"
-            damage < 500 -> "Epic"
+            damage > 500 -> "Epic"
             else -> "Common"
         }
 }
