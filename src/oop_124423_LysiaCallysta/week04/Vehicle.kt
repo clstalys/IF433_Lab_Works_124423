@@ -1,6 +1,6 @@
 package oop_124423_LysiaCallysta.week04
 
-open class Vehicle {
+open class Vehicle (val brand: String){
     var speed: Int = 0
 
     open fun accelerate(){
