@@ -26,7 +26,6 @@ fun main () {
     //Main task 2
     val p = Player("Lysia")
 
-    p.xp
     p.addXp(50)
     p.addXp(60)
 }
