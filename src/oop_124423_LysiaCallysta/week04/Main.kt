@@ -16,4 +16,10 @@ fun main() {
     iniElectricCar.accelerate()
     iniElectricCar.honk()
     iniElectricCar.openTrunk()
+
+    val managerKeren = Manager("Lys", 10000000)
+    managerKeren.work()
+
+    val developerGweh = Developer("Lysia", 8_000_000, "Kotlin")
+    developerGweh.work()
 }
