@@ -1,6 +1,6 @@
 package oop_124423_LysiaCallysta.week05
 
-fun Main() {
+fun main() {
     val dosen1 = Dosen("Pak Alex", "0123456")
     val admin1 = Admin("Bu Siti")
 
