@@ -28,4 +28,19 @@ fun Main() {
     println("Luas persegi: " + math.hitungLuas(4))
     println("Luas persegi panjang: " + math.hitungLuas(5, 2))
     println("Luas lingkaran: " + math.hitungLuas(7.0))
+
+    val wallet = EWallet("Lys", 50000.0)
+    val card = CreditCard("Lysia", 100000.0)
+
+    val payments: List<PaymentMethod> = listOf (wallet, card, card)
+
+    for (payment in payments) {
+
+        println("=== ${payment.accountName} ===")
+
+        payment.processPayment(75000.0)
+
+        println()
+    }
+
 }
