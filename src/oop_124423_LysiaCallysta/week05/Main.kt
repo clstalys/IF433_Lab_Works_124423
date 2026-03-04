@@ -40,6 +40,13 @@ fun Main() {
 
         payment.processPayment(75000.0)
 
+        if (payment is EWallet) {
+            println("Top up otomatis...")
+            payment.topUp(50000.0)
+
+            payment.processPayment(75000.0)
+        }
+
         println()
     }
 
