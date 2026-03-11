@@ -1,4 +1,13 @@
 package oop_124423_LysiaCallysta_week06
 
-class GadgetInterfaces {
+interface Camera {
+    fun turnOn() {
+        println("Lensa kamera terbuka dan sensor aktif.")
+    }
+}
+
+interface Phone {
+    fun turnOn() {
+        println("Sinyal seluler mencari jaringan.")
+    }
 }
