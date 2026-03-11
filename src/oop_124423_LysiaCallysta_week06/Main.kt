@@ -28,11 +28,11 @@ fun main(){
     hub.addDevice(speaker)
     hub.addDevice(cctv)
 
-    println("\nMematikan semua perangkat...")
-    hub.turnOffAllSwitches()
-
-    println("\nMengaktifkan Security Mode...")
+    println("\n=== Security Mode Aktif ===")
     hub.activateSecurityMode()
+
+    println("\n=== Mematikan Semua Switch ===")
+    hub.turnOffAllSwitches()
 }
 
 //ini baru krna commit sblmnya typo jadi comit
