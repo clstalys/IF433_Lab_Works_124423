@@ -57,4 +57,9 @@ fun main() {
     }
 
     println(message)
+
+    println("\n=== TEST GAME MANAGER (SINGLETON) ===")
+
+    GameManager.startGame()
+    GameManager.startGame() // panggil lagi -> ga duplikat
 }
