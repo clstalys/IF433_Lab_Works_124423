@@ -62,4 +62,15 @@ fun main() {
 
     GameManager.startGame()
     GameManager.startGame() // panggil lagi -> ga duplikat
+
+    println("\n=== TEST RARITY & FACTORY ===")
+
+    println("Legendary drop chance: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+
+    println("Weapon: ${starterWeapon.item.name}")
+    println("Damage: ${starterWeapon.item.damage}")
+    println("Rarity: ${starterWeapon.item.rarity}")
+    println("Durability: ${starterWeapon.durability}")
 }
