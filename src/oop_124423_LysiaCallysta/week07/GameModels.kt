@@ -7,3 +7,4 @@ enum class ItemRarity(val dropChance: Int) {
     EPIC(2),
     LEGENDARY(1);
 }
+
