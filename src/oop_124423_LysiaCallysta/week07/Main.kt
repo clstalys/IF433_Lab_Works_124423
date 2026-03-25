@@ -44,4 +44,17 @@ fun main() {
     }
 
     println(uiMessage)
+
+    println("\n=== TEST BATTLE STATE ===")
+
+    val state: BattleState = BattleState.MonsterEncounter("Goblin")
+
+    val message = when (state) {
+        is BattleState.MonsterEncounter -> "Musuh muncul: ${state.monsterName}"
+        is BattleState.LootDropped -> "Dapat item: ${state.item.name}"
+        is BattleState.GameOver -> "Game Over: ${state.reason}"
+        is BattleState.SafeZone -> "Zona aman, istirahat..."
+    }
+
+    println(message)
 }
