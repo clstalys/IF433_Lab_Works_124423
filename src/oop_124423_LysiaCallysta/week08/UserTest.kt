@@ -1,6 +1,6 @@
 package oop_124423_LysiaCallysta.week08
 
-import oop_124423_LysiaCallysta.week08.DataMock.findUser
+import oop_124423_LysiaCallysta.week08.DatabaseMock.findUser
 
 object DatabaseMock {
     fun findUser(id: Int): UserProfile?{
