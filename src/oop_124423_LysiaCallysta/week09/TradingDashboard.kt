@@ -87,3 +87,5 @@ fun main() {
         println(it)
     }
 }
+
+//jalan aman (commit 20)
