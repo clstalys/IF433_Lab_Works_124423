@@ -23,4 +23,12 @@ fun main() {
     closedTrades.forEach {
         println(it)
     }
+
+    val winningTrades = tradeHistory
+    .filter { it.roe > 0 }
+
+    println("\n=== WINNING TRADES ===")
+    winningTrades.forEach {
+        println(it)
+    }
 }
