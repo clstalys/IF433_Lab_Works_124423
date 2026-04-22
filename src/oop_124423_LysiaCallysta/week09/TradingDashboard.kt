@@ -31,4 +31,12 @@ fun main() {
     winningTrades.forEach {
         println(it)
     }
+
+    val losingTrades = tradeHistory
+        .filter { it.roe <= 0 }
+
+    println("\n=== LOSING TRADES ===")
+    losingTrades.forEach {
+        println(it)
+    }
 }
