@@ -55,6 +55,8 @@ fun main(){
         "Davin" to 90
     )
 
+    arKHS.remove("Ara")
+    arKHS["Nika"] = 92
     println(arKHS)
 
 }
