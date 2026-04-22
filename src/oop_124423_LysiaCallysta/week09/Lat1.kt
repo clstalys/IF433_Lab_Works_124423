@@ -60,4 +60,12 @@ fun main(){
     arKHS["Cinta"] = 99
     println(arKHS)
 
+    println("===LAMBDA===")
+    fun tambah(a: Int, b: Int): Int {
+        return a + b
+    }
+    println("Hasil penambahan: ${tambah(5,3)}") //func biasa
+
+    val kurang = {a: Int, b: Int -> a - b } // lambda = kesamping/horizontal
+    println("Hasil pengurangan: ${kurang(5,3)}")
 }
