@@ -20,4 +20,8 @@ fun main(){
     arMatkul[2] = "Aljabar"
     arMatkul.remove("Pemweb")
     println(arMatkul)
+
+    println("====SET OF IMUT===")
+    var arNilai = setOf(80,90,75,85,80,30,50,85)
+    println(arNilai)
 }
