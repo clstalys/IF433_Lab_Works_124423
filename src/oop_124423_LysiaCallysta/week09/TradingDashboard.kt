@@ -61,4 +61,13 @@ fun main() {
     worstPerformersString.forEach {
         println(it)
     }
+
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
+
+    println("\n=== UNIQUE PAIRS ===")
+    uniquePairs.forEach {
+        println(it)
+    }
 }
