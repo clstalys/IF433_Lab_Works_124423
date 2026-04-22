@@ -22,6 +22,15 @@ fun main(){
     println(arMatkul)
 
     println("====SET OF IMUT===")
-    var arNilai = setOf(80,90,75,85,80,30,50,85)
+    val arNilai = setOf(80,90,75,85,80,30,50,85)
+    println("Banayak nilai: ${arNilai.size}")
+    println("ada angka 90 ga? ${arNilai.contains(90)}")
     println(arNilai)
+
+    println("====SET OF MUTABLE===")
+    val arMahasiswa = mutableSetOf("Andi", "Yuli", "Yanto", "Udin", "Yuda")
+    arMahasiswa.add("Yanti")
+    arMahasiswa.remove("Udin")
+    arMahasiswa.add("Udin")
+    println(arMahasiswa)
 }
