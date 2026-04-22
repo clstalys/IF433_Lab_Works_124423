@@ -57,6 +57,7 @@ fun main(){
 
     arKHS.remove("Ara")
     arKHS["Nika"] = 92
+    arKHS["Cinta"] = 99
     println(arKHS)
 
 }
