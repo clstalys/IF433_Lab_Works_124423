@@ -68,4 +68,10 @@ fun main(){
 
     val kurang = {a: Int, b: Int -> a - b } // lambda = kesamping/horizontal
     println("Hasil pengurangan: ${kurang(5,3)}")
+
+    println("===LAMBDA (IT)===")
+
+    val pangkat = {a: Int -> a*a }
+    val hasilpangkat:(Int) -> Int = {it * it}
+    println("Hasil pangkat: ${hasilpangkat(5)}")
 }
