@@ -20,4 +20,10 @@ fun main(){
     val txRepo = WalletRepository<Transaction>()
     txRepo.add(Transaction("TX01", 200.0))
     txRepo.add(Transaction("TX02", 500.0))
+
+    val txResponse = ApiResponse("200 OK", txRepo.getAll())
+    println("Status: ${txResponse.status}")
+    txResponse.data.forEach {
+        println("ID: ${it.id}, Amount: ${it.amount}")
+    }
 }
