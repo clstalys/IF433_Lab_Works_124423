@@ -8,4 +8,6 @@ fun main(){
     coinRepo.add(Coin("USDT", 1000.0))
 
     println(coinRepo.getAll())
+
+    val response = ApiResponse("200 OK", coinRepo.getAll())
 }
