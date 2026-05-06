@@ -12,4 +12,11 @@ fun main(){
     }
 
     println("Panjang nama: $length")
+
+    println("\n===TEST RUN FUNC===")
+    val result = "Kotlin".run {
+        println("Memproses kata: ${this}")
+        length*2
+    }
+    println("Hasil kalkulasi run: $result")
 }
