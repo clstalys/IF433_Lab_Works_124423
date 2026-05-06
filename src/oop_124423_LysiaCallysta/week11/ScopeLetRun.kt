@@ -1,9 +1,9 @@
 package oop_124423_LysiaCallysta.week11
 
-import java.awt.SystemColor.text
+fun main() {
 
-fun main(){
     println("===TEST LET FUNC===")
+
     val name: String? = "Alexander"
 
     val length = name?.let {
@@ -14,9 +14,11 @@ fun main(){
     println("Panjang nama: $length")
 
     println("\n===TEST RUN FUNC===")
+
     val result = "Kotlin".run {
-        println("Memproses kata: ${this}")
-        length*2
+        println("Memproses kata: $this")
+        length?.times(2)
     }
+
     println("Hasil kalkulasi run: $result")
 }
