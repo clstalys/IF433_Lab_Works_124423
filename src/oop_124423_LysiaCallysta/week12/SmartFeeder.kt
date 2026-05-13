@@ -53,3 +53,9 @@ fun main(){
         println("(Opsional: Berikan chicken jerky secara manual)")
     }
 }
+
+//LysiaCallysta 124423
+//berhasil run, berikut hasil run
+//ERROR STOK: Kibble tidak cukup! Diminta 80 gr, sisa 50 gr
+//Siklus pengecekan dispenser pagi selesai.
+//Makan sore sukses! Sisa stok kibble: 970 gr
