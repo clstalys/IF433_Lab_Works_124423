@@ -11,4 +11,14 @@ fun main(){
 
     writer.close()
     println("Proses penulisan unsafe selesai")
+
+    println("===SAFE RESOURCE HANDLING===")
+    val safeFile = File("safe_logs.txt")
+
+    safeFile.printWriter().use { out ->
+        for (i in 1..100){
+            out.println("Safe Log ENtry #$i: System status OK.")
+        }
+    }
+    println("100 baris log berhasil di generate dengan sangat aman")
 }
