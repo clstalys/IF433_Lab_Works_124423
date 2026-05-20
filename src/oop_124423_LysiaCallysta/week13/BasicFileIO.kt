@@ -6,6 +6,9 @@ fun main(){
     println("===TEST WRITE TEXT===")
     val file = File("notes.txt")
 
-    file.writeText("Line 1: inisialisasi sitem\n")
+    file.writeText("Line 1: Inisialisasi sitem\n")
     println("File berhasil dibuat dan ditulis")
+
+    file.appendText("Line 2: Menambahkan konfigurasi baru\n")
+    println("Teks berhasil di-append")
 }
