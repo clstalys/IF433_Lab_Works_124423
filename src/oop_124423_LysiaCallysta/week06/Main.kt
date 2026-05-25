@@ -1,4 +1,4 @@
-package oop_124423_LysiaCallysta_week06
+package oop_124423_LysiaCallysta.week06
 
 fun processCheckout(method: PaymentMethod, amount: Double){
     println("--> Memulai Checkout...")

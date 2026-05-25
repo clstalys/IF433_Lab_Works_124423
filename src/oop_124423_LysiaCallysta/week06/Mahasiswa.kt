@@ -1,4 +1,4 @@
-package oop_124423_LysiaCallysta_week06
+package oop_124423_LysiaCallysta.week06
 
 class Mahasiswa(override val namOrg: String, override val budgetRapat: Int, override val jmlOrg: Int,
                 override val namaMk: String, override val nilaiMk: Int): Organisasi, KelasMK {
