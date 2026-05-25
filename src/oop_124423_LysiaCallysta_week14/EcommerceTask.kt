@@ -1,16 +1,30 @@
 import java.io.File
 
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class RegularPricing : PricingStrategy {
+    override fun calculate(price: Double): Double {
+        return price
+    }
+}
+
+class VipPricing : PricingStrategy {
+    override fun calculate(price: Double): Double {
+        return price * 0.90
+    }
+}
+
 interface OrderRepository {
-    fun saveOrder(itemName: String, finalPrice: Double, customerType: String)
+    fun saveOrder(itemName: String, finalPrice: Double)
 }
 
 class CsvOrderRepository : OrderRepository {
     private val file = File("orders.csv")
 
-    override fun saveOrder(itemName: String, finalPrice: Double, customerType: String) {
-        file.bufferedWriter().use { writer ->
-            writer.append("$itemName,$finalPrice,$customerType\n")
-        }
+    override fun saveOrder(itemName: String, finalPrice: Double) {
+        file.appendText("$itemName,$finalPrice\n")
     }
 }
 
@@ -29,20 +43,42 @@ class SafeOrderProcessor(
     private val notifier: NotificationService
 ) {
 
-    fun processOrder(itemName: String, basePrice: Double, customerType: String) {
-
-        val finalPrice = when (customerType) {
-            "REGULAR" -> basePrice
-            "VIP" -> basePrice * 0.90
-            else -> basePrice
-        }
+    fun processOrder(
+        itemName: String,
+        basePrice: Double,
+        pricingStrategy: PricingStrategy
+    ) {
+        val finalPrice = pricingStrategy.calculate(basePrice)
 
         println("Memproses pesanan $itemName seharga $finalPrice")
 
-        repo.saveOrder(itemName, finalPrice, customerType)
+        repo.saveOrder(itemName, finalPrice)
 
         notifier.sendNotification(
             "Pesanan $itemName Anda telah dikonfirmasi!"
         )
     }
+}
+
+fun main() {
+
+    val repository = CsvOrderRepository()
+    val notifier = EmailNotifier()
+
+    val processor = SafeOrderProcessor(repository, notifier)
+
+    val vipCustomer = VipPricing()
+    val regularCustomer = RegularPricing()
+
+    processor.processOrder(
+        "Laptop",
+        10000000.0,
+        vipCustomer
+    )
+
+    processor.processOrder(
+        "Mouse",
+        500000.0,
+        regularCustomer
+    )
 }
